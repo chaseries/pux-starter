@@ -12,6 +12,4 @@ import Text.Smolder.Markup ((!), text)
 view :: State -> HTML Event
 view s =
   div do
-    h1 $ text "Pux"
-    a ! className "guide" ! href "https://www.purescript-pux.org/" $ text "Guide"
-    a ! className "github" ! href "https://github.com/alexmingoia/purescript-pux/" $ text "GitHub"
+    h1 $ text "It works!"
