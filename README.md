@@ -1,4 +1,8 @@
-# pux-starter-app
+# pux-starter
+
+A fork of [alexmingoia/pux-starter-app](https://github.com/alexmingoia/pux-starter-app).
+
+The former README:
 
 The [starter app](http://github.com/alexmingoia/pux-starter-app) is a pux
 project configured with isomorphic rendering and routing, hot-reloading, and a
