@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "purescript-psci-support": "^3.0.0"
+  },
+  "resolutions": {
+    "purescript-arraybuffer-types": "^2.0.0"
   }
 }
