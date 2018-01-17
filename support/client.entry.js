@@ -1,4 +1,5 @@
 const ClientEntry = require('../src/Client.purs');
+const scss = require('../src/scss/main.scss');
 
 // window.__puxInitialState is the JSON serialized state injected after
 // rendering on the server (src/Server.purs).

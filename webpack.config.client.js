@@ -49,6 +49,13 @@ const config = {
           psc: 'psa',
           pscIde: true
         }
+      },
+      { test: /\.(css|scss)$/,
+        loaders: [
+          "style-loader",
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ],
   },

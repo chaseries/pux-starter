@@ -1,16 +1,16 @@
 module App.Routes where
 
-import Data.Function         (($))
-import Data.Functor          ((<$))
-import Control.Alt           ((<|>))
-import Control.Apply         ((<*))
-import Data.Foreign.Class    (class Decode, class Encode)
-import Data.Foreign.Generic  (defaultOptions, genericDecode, genericEncode)
-import Data.Generic.Rep      (class Generic)
+import Data.Function (($))
+import Data.Functor ((<$))
+import Control.Alt ((<|>))
+import Control.Apply ((<*))
+import Data.Foreign.Class (class Decode, class Encode)
+import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
+import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
-import Data.Maybe            (fromMaybe)
-import Data.Show             (class Show)
-import Pux.Router            (lit, end, router)
+import Data.Maybe (fromMaybe)
+import Data.Show (class Show)
+import Pux.Router (lit, end, router)
 
 data Route = Home 
            | About 
@@ -30,7 +30,7 @@ match url = fromMaybe (NotFound url) $ router url $
 
 toURL :: Route -> String
 toURL (NotFound url) = url
-toURL (Home)         = "/"
-toURL (About)        = "/about"
+toURL (Home) = "/"
+toURL (About) = "/about"
 
 

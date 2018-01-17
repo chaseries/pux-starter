@@ -18,7 +18,8 @@
     "purescript-hyper": "^0.7.3"
   },
   "devDependencies": {
-    "purescript-psci-support": "^3.0.0"
+    "purescript-psci-support": "^3.0.0",
+    "node-sass": "^4.7.2"
   },
   "resolutions": {
     "purescript-arraybuffer-types": "^2.0.0"

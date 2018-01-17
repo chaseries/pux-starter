@@ -14,21 +14,18 @@ import Text.Smolder.HTML (div, header, nav, ul, a)
 import Text.Smolder.HTML.Attributes (className, href)
 import Text.Smolder.Markup ((!), (#!), text)
 
+layoutHeader :: HTML Event
+layoutHeader = do
+  header $ do
+    nav $ do
+      ul $ do
+        a ! href "/" #! onClick (Navigate "/") $ text "Home"
+        a ! href "/about" #! onClick (Navigate "/about") $ text "About"
+
 view :: State -> HTML Event
 view (State st) =
   div ! className "app" $ do
-
-    header $ do
-       nav $ do
-          ul $ do
-             a 
-               ! href "/" 
-               #! onClick (Navigate "/")
-               $ text "Home"
-             a 
-               ! href "/about" 
-               #! onClick (Navigate "/about")
-               $ text "About"
+    layoutHeader
     case st.route of
       (Home) -> Homepage.view (State st)
       (NotFound url) -> NotFound.view (State st)
